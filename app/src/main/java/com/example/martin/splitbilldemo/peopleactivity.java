@@ -1,7 +1,9 @@
 package com.example.martin.splitbilldemo;
 
 import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Pair;
@@ -38,11 +40,16 @@ public class peopleactivity extends AppCompatActivity {
         l5 = findViewById( R.id.l5 );
         l6 = findViewById( R.id.l6 );
 
+        SharedPreferences sharedPreferences=getSharedPreferences( "users",Context.MODE_PRIVATE );
+        int mnumber=sharedPreferences.getInt( "mnumber",1 );
+        if(mnumber==1){
+            final Intent intent = getIntent();
+            peoplevalue = Integer.parseInt( intent.getStringExtra( "i1" ) );
+            Toast.makeText( peopleactivity.this, peoplevalue + " ", Toast.LENGTH_SHORT ).show();
 
-        final Intent intent = getIntent();
-        peoplevalue = Integer.parseInt( intent.getStringExtra( "i1" ) );
-        Toast.makeText( peopleactivity.this, peoplevalue + " ", Toast.LENGTH_SHORT ).show();
-
+        }else {
+            peoplevalue = mnumber;
+        }
 
         layout( peoplevalue );
 

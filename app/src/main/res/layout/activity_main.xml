@@ -107,6 +107,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView13"
         android:layout_width="100dp"
         android:layout_height="30dp"
         android:layout_marginStart="20dp"
@@ -124,7 +125,7 @@
             android:clickable="true"
             android:focusable="true"
             android:gravity="center"
-            android:text="Next step >"
+            android:text="New Trip"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -208,5 +209,41 @@
             android:layout_height="55dp"
             android:src="@drawable/aboutus"/>
     </FrameLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/resumebuttoncard"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:cardElevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView13"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <TextView
+
+            android:id="@+id/resumebutton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Resume"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+
 
 </android.support.constraint.ConstraintLayout>
