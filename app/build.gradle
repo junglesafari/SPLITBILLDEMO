@@ -22,6 +22,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+//custon checkbox
+    implementation 'com.bigmercu.cBox:cbox:1.08'
+
+
+    implementation 'com.android.support:support-v4:27.1.1'
     testImplementation 'junit:junit:4.12'
     //NUMBER PICKER
     implementation 'com.shawnlin:number-picker:2.4.6'
