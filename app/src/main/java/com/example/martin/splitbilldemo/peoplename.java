@@ -92,6 +92,13 @@ public class peoplename extends AppCompatActivity  {
     private static final int PICK_IMAGE_REQUEST6=6;
 
     private Uri mImageuri;
+    private Uri user1imageuri;
+    private Uri user2imageuri;
+    private Uri user3imageuri;
+    private Uri user4imageuri;
+    private Uri user5imageuri;
+    private Uri user6imageuri;
+     int peoplenumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,8 +115,8 @@ public class peoplename extends AppCompatActivity  {
         sharedPrefvalues = getSharedPreferences( "values", Context.MODE_PRIVATE );
 
         Intent intent = getIntent();
-        final int peoplenumber = intent.getIntExtra( "intent1", 2 );
-        visibleelement( peoplenumber );
+         peoplenumber = intent.getIntExtra( "intent1", 2 );
+
         Toast.makeText( getApplicationContext(), peoplenumber + "", Toast.LENGTH_SHORT ).show();
 
 
@@ -137,9 +144,15 @@ public class peoplename extends AppCompatActivity  {
 
             user1 = sharedPrefusername.getString( "user1", "" );
             user2 = sharedPrefusername.getString( "user2", "" );
+            String user1storeimage= sharedPrefusername.getString( "user1imageuri", "" );
+            String user2storeimage= sharedPrefusername.getString( "user2imageuri", "" );
             if (!user1.equals( "" )) {
                 ed1.setText( user1 );
                 ed2.setText( user2 );
+
+                  Picasso.with( peoplename.this ).load(Uri.parse( user1storeimage )  ).fit().into( userimg1 );
+                Picasso.with( peoplename.this ).load(Uri.parse(  user2storeimage )).fit().into( userimg2 );
+
             }
 
 
@@ -162,11 +175,20 @@ public class peoplename extends AppCompatActivity  {
             user1 = sharedPrefusername.getString( "user1", "" );
             user2 = sharedPrefusername.getString( "user2", "" );
             user3 = sharedPrefusername.getString( "user3", "" );
+            String user1storeimage= sharedPrefusername.getString( "user1imageuri", "" );
+            String user2storeimage= sharedPrefusername.getString( "user2imageuri", "" );
+            String user3storeimage= sharedPrefusername.getString( "user3imageuri", "" );
 
             if (!user1.equals( "" )) {
                 ed1.setText( user1 );
                 ed2.setText( user2 );
                 ed3.setText( user3 );
+
+                Picasso.with( peoplename.this ).load(Uri.parse( user1storeimage )  ).fit().into( userimg1 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user2storeimage )  ).fit().into( userimg2 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user3storeimage )  ).fit().into( userimg3 );
+
+
             }
 
 
@@ -195,11 +217,29 @@ public class peoplename extends AppCompatActivity  {
             user2 = sharedPrefusername.getString( "user2", "" );
             user3 = sharedPrefusername.getString( "user3", "" );
             user4 = sharedPrefusername.getString( "user4", "" );
+
+            String user1storeimage= sharedPrefusername.getString( "user1imageuri", "" );
+            String user2storeimage= sharedPrefusername.getString( "user2imageuri", "" );
+            String user3storeimage= sharedPrefusername.getString( "user3imageuri", "" );
+            String user4storeimage= sharedPrefusername.getString( "user4imageuri", "" );
+
+
+
+
+
+
             if (!user1.equals( "" )) {
                 ed1.setText( user1 );
                 ed2.setText( user2 );
                 ed3.setText( user3 );
                 ed4.setText( user4 );
+
+
+                Picasso.with( peoplename.this ).load(Uri.parse( user1storeimage )  ).fit().into( userimg1 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user2storeimage )  ).fit().into( userimg2 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user3storeimage )  ).fit().into( userimg3 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user4storeimage )  ).fit().into( userimg4 );
+
             }
 
 
@@ -235,12 +275,27 @@ public class peoplename extends AppCompatActivity  {
             user3 = sharedPrefusername.getString( "user3", "" );
             user4 = sharedPrefusername.getString( "user4", "" );
             user5 = sharedPrefusername.getString( "user5", "" );
+            String user1storeimage= sharedPrefusername.getString( "user1imageuri", "" );
+            String user2storeimage= sharedPrefusername.getString( "user2imageuri", "" );
+            String user3storeimage= sharedPrefusername.getString( "user3imageuri", "" );
+            String user4storeimage= sharedPrefusername.getString( "user4imageuri", "" );
+            String user5storeimage= sharedPrefusername.getString( "user5imageuri", "" );
+
+
             if (!user1.equals( "" )) {
                 ed1.setText( user1 );
                 ed2.setText( user2 );
                 ed3.setText( user3 );
                 ed4.setText( user4 );
                 ed5.setText( user5 );
+
+                Picasso.with( peoplename.this ).load(Uri.parse( user1storeimage )  ).fit().into( userimg1 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user2storeimage )  ).fit().into( userimg2 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user3storeimage ) ).fit().into( userimg3 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user4storeimage )  ).fit().into( userimg4 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user5storeimage )  ).fit().into( userimg5 );
+
+
             }
 
 
@@ -278,6 +333,15 @@ public class peoplename extends AppCompatActivity  {
             user4 = sharedPrefusername.getString( "user4", "" );
             user5 = sharedPrefusername.getString( "user5", "" );
             user6 = sharedPrefusername.getString( "user6", "" );
+
+            String user1storeimage= sharedPrefusername.getString( "user1imageuri", "" );
+            String user2storeimage= sharedPrefusername.getString( "user2imageuri", "" );
+            String user3storeimage= sharedPrefusername.getString( "user3imageuri", "" );
+            String user4storeimage= sharedPrefusername.getString( "user4imageuri", "" );
+            String user5storeimage= sharedPrefusername.getString( "user5imageuri", "" );
+            String user6storeimage= sharedPrefusername.getString( "user6imageuri", "" );
+
+
             if (!user1.equals( "" )) {
                 ed1.setText( user1 );
                 ed2.setText( user2 );
@@ -285,6 +349,17 @@ public class peoplename extends AppCompatActivity  {
                 ed4.setText( user4 );
                 ed5.setText( user5 );
                 ed6.setText( user6 );
+
+
+
+                Picasso.with( peoplename.this ).load( Uri.parse( user1storeimage )).fit().into( userimg1 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user2storeimage ) ).fit().into( userimg2 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user3storeimage )  ).fit().into( userimg3 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user4storeimage )  ).fit().into( userimg4 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user5storeimage )  ).fit().into( userimg5 );
+                Picasso.with( peoplename.this ).load(Uri.parse( user6storeimage )  ).fit().into( userimg6 );
+
+
             }
 
 
@@ -336,8 +411,14 @@ public class peoplename extends AppCompatActivity  {
             } else {
                 editor.putString( "user1", user1 );
                 editor.putString( "user2", user2 );
+
+                editor.putString( "user1imageuri",String.valueOf( user1imageuri) );
+                editor.putString( "user2imageuri",String.valueOf( user2imageuri) );
+
                 editor.putInt( "mnumber",2 );
                 editor.commit();
+
+
             }
 
 
@@ -352,8 +433,16 @@ public class peoplename extends AppCompatActivity  {
                 editor.putString( "user1", user1 );
                 editor.putString( "user2", user2 );
                 editor.putString( "user3", user3 );
+                editor.putString( "user1imageuri",String.valueOf(  user1imageuri) );
+                editor.putString( "user2imageuri",String.valueOf(  user2imageuri));
+                editor.putString( "user3imageuri",String.valueOf(  user3imageuri));
                 editor.putInt( "mnumber",3 );
                 editor.commit();
+
+
+
+
+
             }
         } else if (m == 4) {
 
@@ -370,6 +459,12 @@ public class peoplename extends AppCompatActivity  {
                 editor.putString( "user2", user2 );
                 editor.putString( "user3", user3 );
                 editor.putString( "user4", user4 );
+
+                editor.putString( "user1imageuri",String.valueOf(  user1imageuri));
+                editor.putString( "user2imageuri",String.valueOf(  user2imageuri) );
+                editor.putString( "user3imageuri",String.valueOf(  user3imageuri) );
+                editor.putString( "user4imageuri",String.valueOf(  user4imageuri) );
+
                 editor.putInt( "mnumber",4 );
                 editor.commit();
 
@@ -393,6 +488,13 @@ public class peoplename extends AppCompatActivity  {
                 editor.putString( "user3", user3 );
                 editor.putString( "user4", user4 );
                 editor.putString( "user5", user5 );
+
+                editor.putString( "user1imageuri",String.valueOf(  user1imageuri) );
+                editor.putString( "user2imageuri",String.valueOf(  user2imageuri) );
+                editor.putString( "user3imageuri",String.valueOf(  user3imageuri) );
+                editor.putString( "user4imageuri",String.valueOf(  user4imageuri));
+                editor.putString( "user5imageuri",String.valueOf(  user5imageuri));
+
                 editor.putInt( "mnumber",5 );
                 editor.commit();
 
@@ -417,6 +519,16 @@ public class peoplename extends AppCompatActivity  {
                 editor.putString( "user4", user4 );
                 editor.putString( "user5", user5 );
                 editor.putString( "user6", user6 );
+
+                editor.putString( "user1imageuri",String.valueOf(  user1imageuri) );
+                editor.putString( "user2imageuri",String.valueOf(  user2imageuri) );
+                editor.putString( "user3imageuri",String.valueOf(  user3imageuri) );
+                editor.putString( "user4imageuri",String.valueOf(  user4imageuri) );
+                editor.putString( "user5imageuri",String.valueOf(  user5imageuri) );
+                editor.putString( "user6imageuri",String.valueOf(  user6imageuri));
+
+
+
                 editor.putInt( "mnumber",6 );
                 editor.commit();
 
@@ -526,29 +638,30 @@ public class peoplename extends AppCompatActivity  {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode==PICK_IMAGE_REQUEST1&&resultCode==RESULT_OK&&data!=null&&data.getData()!=null){
-            mImageuri=data.getData();
-            Picasso.with( this ).load( mImageuri ).fit().into( userimg1 );
+            user1imageuri=data.getData();
+            Picasso.with( this ).load( user1imageuri).fit().into( userimg1 );
         }else if(requestCode==PICK_IMAGE_REQUEST2&&resultCode==RESULT_OK&&data!=null&&data.getData()!=null){
-            mImageuri=data.getData();
-            Picasso.with( this ).load( mImageuri ).fit().into( userimg2 );
+            user2imageuri=data.getData();
+            Picasso.with( this ).load( user2imageuri).fit().into( userimg2 );
         }else if(requestCode==PICK_IMAGE_REQUEST3&&resultCode==RESULT_OK&&data!=null&&data.getData()!=null){
-            mImageuri=data.getData();
-            Picasso.with( this ).load( mImageuri ).fit().into( userimg3 );
+            user3imageuri=data.getData();
+            Picasso.with( this ).load( user3imageuri ).fit().into( userimg3 );
         }else if(requestCode==PICK_IMAGE_REQUEST4&&resultCode==RESULT_OK&&data!=null&&data.getData()!=null){
-            mImageuri=data.getData();
-            Picasso.with( this ).load( mImageuri ).fit().into( userimg4 );
+            user4imageuri=data.getData();
+            Picasso.with( this ).load(user4imageuri ).fit().into( userimg4 );
         }else if(requestCode==PICK_IMAGE_REQUEST5&&resultCode==RESULT_OK&&data!=null&&data.getData()!=null){
-            mImageuri=data.getData();
-            Picasso.with( this ).load( mImageuri ).fit().into( userimg5 );
+            user5imageuri=data.getData();
+            Picasso.with( this ).load(user5imageuri ).fit().into( userimg5 );
         }else if(requestCode==PICK_IMAGE_REQUEST6&&resultCode==RESULT_OK&&data!=null&&data.getData()!=null){
-            mImageuri=data.getData();
-            Picasso.with( this ).load( mImageuri ).fit().into( userimg6 );
+            user6imageuri=data.getData();
+            Picasso.with( this ).load( user6imageuri ).fit().into( userimg6 );
         }
         super.onActivityResult( requestCode, resultCode, data );
     }
 
-
-
-
-
+    @Override
+    protected void onStart() {
+        super.onStart();
+        visibleelement( peoplenumber );
+    }
 }

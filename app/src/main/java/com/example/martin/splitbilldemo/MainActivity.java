@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
                 editor.commit();
 
                 SharedPreferences.Editor editor1 = sharedPrefvalues.edit();
-                editor.clear();
-                editor.commit();
+                editor1.clear();
+                editor1.commit();
 
 
                 Intent intent = new Intent( MainActivity.this, peopleactivity.class );
